@@ -130,7 +130,7 @@ class Swimming(Training):
         self.count_pool = count_pool
 
     def get_mean_speed(self) -> float:
-        """Получить среднюю скорость."""
+        """Получить среднюю скорость во время плавания."""
         var = self.length_pool * self.count_pool
         mean_speed = var / self.M_IN_KM / self.duration
         return mean_speed
