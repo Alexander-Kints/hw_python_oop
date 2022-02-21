@@ -37,7 +37,6 @@ class Training:
                  action: int,
                  duration: float,
                  weight: float,
-                 
                  ) -> None:
         self.action = action
         self.duration = duration
@@ -66,7 +65,6 @@ class Training:
                            self.get_mean_speed(),
                            self.get_spent_calories())
         return info
-
 
 
 class Running(Training):
@@ -126,7 +124,6 @@ class Swimming(Training):
                  weight: float,
                  length_pool: float,
                  count_pool: int,
-                 
                  ) -> None:
         super().__init__(action, duration, weight)
         self.length_pool = length_pool
@@ -150,7 +147,8 @@ class Swimming(Training):
 
 
 def read_package(workout_type: str, data: List[Union[int, float]]) -> Training:
-    """Прочитать данные полученные от датчиков."""
+    """Прочитать данные полученные от датчиков
+    и вернуть объект тренировки."""
     code_workout: Dict[str, type] = {
         'RUN': Running,
         'WLK': SportsWalking,
@@ -167,7 +165,7 @@ def main(training: Training) -> None:
 
 
 if __name__ == '__main__':
-    packages : List[Tuple[str, List[int]]] = [
+    packages: List[Tuple[str, List[int]]] = [
         ('SWM', [720, 1, 80, 25, 40]),
         ('RUN', [15000, 1, 75]),
         ('WLK', [9000, 1, 75, 180]),
@@ -176,4 +174,3 @@ if __name__ == '__main__':
     for workout_type, data in packages:
         training = read_package(workout_type, data)
         main(training)
-
