@@ -160,7 +160,6 @@ def read_package(workout_type: str, data: List[int]) -> Training:
         print('Неверный код тренировки!')
         
 
-
 def main(training: Training) -> None:
     """Главная функция."""
     try:
