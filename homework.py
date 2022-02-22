@@ -158,7 +158,7 @@ def read_package(workout_type: str, data: List[int]) -> Training:
         return workout_object
     else:
         print('Неверный код тренировки!')
-        
+
 
 def main(training: Training) -> None:
     """Главная функция."""
