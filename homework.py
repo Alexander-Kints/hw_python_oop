@@ -1,4 +1,4 @@
-from typing import List, Dict, Tuple, Union
+from typing import Dict, List, Tuple, Union
 
 
 class InfoMessage:
